@@ -1,10 +1,16 @@
-import styles from "./styles/app.module.scss";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
+import Home from "./pages/home";
+
+// import styles from "./styles/app.module.scss";
 
 function App() {
   return (
-    <div className={styles.app}>
-      <h1>Coming soon</h1>
-    </div>
+    <Router>
+      <Switch>
+        <Route path="/" exact component={Home} />
+      </Switch>
+    </Router>
   );
 }
 
