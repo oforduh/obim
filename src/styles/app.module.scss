@@ -1,0 +1,10 @@
+.app {
+    background-image: linear-gradient(to bottom, #FD3573, #FF7654);
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+
+    h1 {
+        color: white;
+    }
+}
