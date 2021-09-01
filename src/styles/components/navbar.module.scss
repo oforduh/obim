@@ -12,6 +12,9 @@
   padding: 0 50px;
   color: var(--primary-white);
   justify-content: space-between;
+  position: sticky;
+  top: 0px;
+  z-index: 2;
 
   //   left side div
   .ls_container {
