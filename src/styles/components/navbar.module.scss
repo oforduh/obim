@@ -13,7 +13,7 @@
   color: var(--primary-white);
   justify-content: space-between;
   position: sticky;
-  top: 0px;
+  top: 0;
   z-index: 2;
 
   //   left side div
@@ -197,6 +197,12 @@
   .open {
     right: 0;
   }
+}
+
+.scroll {
+  position: absolute;
+  top: 905px;
+  // visibility: hidden;
 }
 
 // Media Queries

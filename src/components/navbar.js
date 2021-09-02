@@ -1,12 +1,21 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { IoIosMenu } from "react-icons/io";
 import { IoClose } from "react-icons/io5";
 
+import { Scroll } from "../context/scroll";
+
 import styles from "../styles/components/navbar.module.scss";
 
 function NavBar() {
+  const [scrollNav, setScrollNav] = useState(false);
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
+
+  const { scrolled } = Scroll();
+
+  useEffect(() => {
+    scrolled >= 905 ? setScrollNav(true) : setScrollNav(false);
+  }, [scrolled]);
 
   const openMobileNavigation = () => {
     setMobileNavOpen(!mobileNavOpen);
@@ -15,7 +24,7 @@ function NavBar() {
   const menuLinks = ["Products", "Learn", "Safety", "Support"];
 
   return (
-    <nav className={styles.navbar}>
+    <nav className={`${styles.navbar} ${scrollNav && styles.scroll}`}>
       <MobileNavBar
         opened={mobileNavOpen}
         links={menuLinks}
@@ -72,8 +81,8 @@ const MobileNavBar = ({ opened, links, setopen }) => {
       <div className={styles.bottom_container}>
         <div className={styles.menuLinks_container}>
           <ul>
-            {links.map((item) => (
-              <li>
+            {links.map((item, index) => (
+              <li key={index}>
                 <Link to={`/${item.toLowerCase()}`}>{item}</Link>
               </li>
             ))}

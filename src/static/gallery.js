@@ -1,8 +1,9 @@
 import image_1 from "../assets/images/akpos_1.jpeg";
 import image_2 from "../assets/images/chefT_1.jpeg";
 import image_3 from "../assets/images/harrison_1.jpeg";
-import image_4 from "../assets/images/nikky_1.jpeg";
-import image_5 from "../assets/images/obed_1.jpeg";
+import image_4 from "../assets/images/obed_1.jpeg";
+// import image_4 from "../assets/images/nikky_1.jpeg";
+import image_5 from "../assets/images/nikky_2.jpeg";
 import image_6 from "../assets/images/sam_1.jpeg";
 import image_7 from "../assets/images/tosin_2.jpeg";
 import image_8 from "../assets/images/precious_1.jpeg";
